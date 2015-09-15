@@ -1,12 +1,19 @@
 
-
+Bacteria [] colony;
+Bacteria two;
  //declare bacteria variables here
  Bacteria one;   
  void setup()   
  {     
+ 	colony = new Bacteria[20];
+ 	for(int x = )
  	size(400, 400);
  	one = new Bacteria();
- 	
+ 	two = new Bacteria();
+ 	one.move();
+ 	one.show();
+ 	two.move();
+ 	two.show();
 
  	//initialize bacteria variables here   
  }   
@@ -20,19 +27,21 @@
  class Bacteria    
  {
  	int myX, myY, bColor;
- 	Bacteria(int x, int y)
+ 	Bacteria()
  	{
  		myX = 200;
  		myY = 200;
+ 		//bColor = fill((int)(Math.random() * 255));
  		//bColor = fill((int)(math.random() * 255),(int)(math.random() * 255),(int)(math.random() * 255));
  	}
  	void move()
  	{
- 		myX = myX + (int)(math.Rondom() * 3 - 1);
- 		myY = myY + (int)(math.Random() * 3 - 1);
+ 		myX = myX + (int)(Math.random() * 5)- 2;
+ 		myY = myY + (int)(Math.random() * 5)- 2;
  	}
  	void show()
  	{
+ 		fill((int)(Math.random() * 255));
  		ellipse(myX, myY, 10, 10);
  	}
 
