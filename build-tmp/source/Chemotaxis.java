@@ -15,26 +15,39 @@ import java.io.IOException;
 public class Chemotaxis extends PApplet {
 
 
-Bacteria two;
+Bacteria [] colony;
+//Bacteria two;
  //declare bacteria variables here
- Bacteria one;   
+ //Bacteria one;   
  public void setup()   
  {     
+ 	colony = new Bacteria[20];
+ 	for(int x = 0; x < 20; x ++)
+ 	{
+ 		colony[x] = new Bacteria();
+ 	}
  	size(400, 400);
+ 	/*
  	one = new Bacteria();
  	two = new Bacteria();
  	one.move();
  	one.show();
  	two.move();
  	two.show();
+ 	*/
 
  	//initialize bacteria variables here   
  }   
  public void draw()   
  {    
  	background(0);
- 	one.move();
- 	one.show();
+ 	for(int i = 0; i < colony.length; i++)
+ 	{
+ 		colony[i].move();
+ 		colony[i].show();
+ 	}
+ 	//one.move();
+ 	//one.show();
  	//move and show the bacteria   
  }  
  class Bacteria    
