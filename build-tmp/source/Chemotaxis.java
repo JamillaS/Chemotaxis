@@ -14,8 +14,9 @@ import java.io.IOException;
 
 public class Chemotaxis extends PApplet {
 
+int colX = 110;
+int colY = 100;
 
-int col;
 Bacteria [] colony;
 //Bacteria two;
  //declare bacteria variables here
@@ -41,16 +42,22 @@ Bacteria [] colony;
  	{
  		colony[i].move();
  		colony[i].show();
+ 		/*
+ 		fill(255);
+ 		ellipse(colX,colY, 50, 50);
+ 		if(get(x,y) != color(255,255,255))
+ 		{
+ 			fill(0);
+ 			ellipse(colX,colY,5, 5);
+ 			colX = (int)(Math.random() * 400);
+			colY = (int)(Math.random() * 400);
+ 		}
+ 		*/
+
  	}  
 
  }  
-public void mouseMoved() 
- {
- 	
- 		ellipse((int)(Math.random() * 255), (int)(Math.random() * 255), 10, 10);
- 	
- 	
- }
+
  
  class Bacteria    
  {
@@ -59,18 +66,40 @@ public void mouseMoved()
  	{
  		myX = 200;
  		myY = 200;
- 		bColor = (150);
+ 		bColor = color((int)(Math.random() * 255),(int)(Math.random() * 255),(int)(Math.random() * 255));
  		
  	}
  	public void move()
  	{
  		myX = myX + (int)(Math.random() * 5)- 2;
  		myY = myY + (int)(Math.random() * 5)- 2;
+ 		if(colX >= 200 && colY >= 200)
+ 		{
+ 			myX = myX + (int)(Math.random() * 5)- 1;
+ 			myY = myY + (int)(Math.random() * 5)+ 1;
+ 		}
+ 		if(colX < 200 && colY < 200)
+ 		{
+ 			myX = myX + (int)(Math.random() * 5) + 1;
+ 			myY = myY + (int)(Math.random() * 5) - 1;
+ 		}
  	}
  	public void show()
  	{
- 		fill(bColor,bColor,bColor);
+ 		fill(bColor);
+ 		noStroke();
  		ellipse(myX, myY, 10, 10);
+ 		fill(255);
+ 		ellipse(colX,colY, 100, 100);
+ 		if(get(myX,myY) == color(255,255,255))
+ 		{
+ 			fill(0);
+ 			ellipse(colX,colY, 100, 100);
+ 			colX = (int)(Math.random() * 400);
+			colY = (int)(Math.random() * 400);
+ 			
+ 		}
+ 		
  	}
 
  	//lots of java!   
