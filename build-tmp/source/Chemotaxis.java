@@ -73,16 +73,48 @@ Bacteria [] colony;
  	{
  		myX = myX + (int)(Math.random() * 5)- 2;
  		myY = myY + (int)(Math.random() * 5)- 2;
+ 		if(mouseX  >= myX && mouseY >= myY)
+ 		{
+ 			myX = myX + (int)(Math.random() * 5) - 5;
+ 			myY = myY + (int)(Math.random() * 5)+ 5;
+ 		}
+ 		if(mouseX  >= myX && mouseY < myY)
+ 		{
+ 			myX = myX + (int)(Math.random() * 5) + 5;
+ 			myY = myY + (int)(Math.random() * 5) - 5;
+ 		}
+ 		if(mouseX  < myX && mouseY < myY)
+ 		{
+ 			myX = myX + (int)(Math.random() * 5) - 5;
+ 			myY = myY + (int)(Math.random() * 5) - 5;
+ 		}
+ 		if(mouseX  < myX && mouseY < myY)
+ 		{
+ 			myX = myX + (int)(Math.random() * 5) - 5;
+ 			myY = myY + (int)(Math.random() * 5) - 5;
+ 		}
+ 		/*
  		if(colX >= 200 && colY >= 200)
  		{
- 			myX = myX + (int)(Math.random() * 5)- 1;
+ 			myX = myX + (int)(Math.random() * 5)+ 1;
  			myY = myY + (int)(Math.random() * 5)+ 1;
  		}
  		if(colX < 200 && colY < 200)
  		{
- 			myX = myX + (int)(Math.random() * 5) + 1;
+ 			myX = myX + (int)(Math.random() * 5) - 3;
  			myY = myY + (int)(Math.random() * 5) - 1;
  		}
+ 		if(colX < 200 && colY >= 200)
+ 		{
+ 			myX = myX + (int)(Math.random() * 5) - 1;
+ 			myY = myY + (int)(Math.random() * 5) - 1;
+ 		}
+ 		if(colX >= 200 && colY < 200)
+ 		{
+ 			myX = myX + (int)(Math.random() * 5)+ 1;
+ 			myY = myY + (int)(Math.random() * 5) - 1;
+ 		}
+ 		*/
  	}
  	public void show()
  	{
