@@ -1,10 +1,11 @@
 //int colX = 110;
 //int colY = 100;
 int a = (int)(Math.random() * 400);
- int b = (int)(Math.random() * 400);
+int b = (int)(Math.random() * 400);
 int colX = (int)(Math.random() * 400);
 int colY = (int)(Math.random() * 400);
-Bacteria [] colony;
+Bacteria[] colony;
+float size = 10;
 //Bacteria two;
  //declare bacteria variables here
  //Bacteria one;   
@@ -12,7 +13,7 @@ Bacteria [] colony;
  {     
 
  	colony = new Bacteria[20];
- 	for(int x = 0; x < 20; x ++)
+ 	for(int x = 0; x < colony.length; x ++)
  	{
  		colony[x] = new Bacteria();
 
@@ -100,14 +101,15 @@ Bacteria [] colony;
  	{
  		fill(bColor);
  		noStroke();
- 		ellipse(myX, myY, 10, 10);
+ 		ellipse(myX, myY, size, size);
  		fill(255);
  		for (int i = 0; i < 10; i++)
  		{
+ 			fill(255,255,254);
+ 			ellipse(a,b, 5, 5);
+ 			fill(255,255,255);
+ 			ellipse(colX,colY, 5, 5);
  			
- 			ellipse(colX,colY, 7, 7);
- 			
- 			ellipse(a,b, 7, 7);
  			
 			//colY = (int)(Math.random() * 400);
  		}
@@ -116,14 +118,24 @@ Bacteria [] colony;
  		if(get(myX,myY) == color(255,255,255))
 
  		{
+
+ 			
  			fill(0);
 
- 			ellipse(colX,colY, 7, 7);
- 			ellipse(a,b, 7, 7);
+ 			ellipse(colX,colY, 5, 5);
+ 			//ellipse(a,b, 7, 7);
  			colX = (int)(Math.random() * 400);
 			colY = (int)(Math.random() * 400);
-			a = (int)(Math.random() * 400);
-			b = (int)(Math.random() * 400); 			
+			//a = (int)(Math.random() * 400);
+			//b = (int)(Math.random() * 400); 			
+ 		}
+ 		else if(get(myX,myY) == color(255,255,254))
+ 		{
+ 			size = size + 0.3;
+ 			fill(0);
+ 			ellipse(a,b,5,5);
+ 			a = (int)(Math.random() * 400);
+			b = (int)(Math.random() * 400);
  		}
  		
  	}
