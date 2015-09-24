@@ -21,7 +21,7 @@ int b = (int)(Math.random() * 400);
 int colX = (int)(Math.random() * 400);
 int colY = (int)(Math.random() * 400);
 Bacteria[] colony;
-float size = 10;
+float size = 10.0f;
 //Bacteria two;
  //declare bacteria variables here
  //Bacteria one;   
@@ -35,7 +35,7 @@ float size = 10;
 
  	}
  	size(400, 400); 
- 	frameRate(30);
+ 	frameRate(40);
  	
  }   
  public void draw()   
@@ -90,7 +90,7 @@ float size = 10;
  			myY = myY + (int)(Math.random() * 5) - 5;
  		}
  	}
- 		/*
+ 		
  		if(colX >= 200 && colY >= 200)
  		{
  			myX = myX + (int)(Math.random() * 5)+ 2;
@@ -111,7 +111,7 @@ float size = 10;
  			myX = myX + (int)(Math.random() * 5)+ 2;
  			myY = myY + (int)(Math.random() * 5) - 2;
  		}
- 		*/
+ 		
  	}
  	public void show()
  	{
