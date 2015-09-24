@@ -102,7 +102,7 @@ float siz = 10.0;
  	{
  		fill(bColor);
  		noStroke();
- 		ellipse(myX, myY, size, size);
+ 		ellipse(myX, myY, siz, siz);
  		fill(255);
  		for (int i = 0; i < 10; i++)
  		{

@@ -21,10 +21,10 @@ int b = (int)(Math.random() * 400);
 int colX = (int)(Math.random() * 400);
 int colY = (int)(Math.random() * 400);
 Bacteria[] colony;
-float size = 10.0f;
-//Bacteria two;
+float siz = 10.0f;
+
  //declare bacteria variables here
- //Bacteria one;   
+   
  public void setup()   
  {     
 
@@ -148,7 +148,7 @@ float size = 10.0f;
  		}
  		else if(get(myX,myY) == color(255,255,254))
  		{
- 			size += 0.3f;
+ 			siz += 0.3f;
  			fill(0);
  			ellipse(a,b,5,5);
  			a = (int)(Math.random() * 400);
