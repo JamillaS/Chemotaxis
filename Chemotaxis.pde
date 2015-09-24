@@ -5,10 +5,10 @@ int b = (int)(Math.random() * 400);
 int colX = (int)(Math.random() * 400);
 int colY = (int)(Math.random() * 400);
 Bacteria[] colony;
-float size = 10.0;
-//Bacteria two;
+float siz = 10.0;
+
  //declare bacteria variables here
- //Bacteria one;   
+   
  void setup()   
  {     
 
@@ -74,7 +74,8 @@ float size = 10.0;
  			myY = myY + (int)(Math.random() * 5) - 5;
  		}
  	}
- 		
+ 		/*
+ 		causes the bacteria to move away from food?
  		if(colX >= 200 && colY >= 200)
  		{
  			myX = myX + (int)(Math.random() * 5)+ 2;
@@ -95,7 +96,7 @@ float size = 10.0;
  			myX = myX + (int)(Math.random() * 5)+ 2;
  			myY = myY + (int)(Math.random() * 5) - 2;
  		}
- 		
+ 		*/
  	}
  	void show()
  	{
@@ -131,7 +132,7 @@ float size = 10.0;
  		}
  		else if(get(myX,myY) == color(255,255,254))
  		{
- 			size = size + 0.3;
+ 			siz += 0.3;
  			fill(0);
  			ellipse(a,b,5,5);
  			a = (int)(Math.random() * 400);

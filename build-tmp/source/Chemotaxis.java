@@ -90,7 +90,8 @@ float size = 10.0f;
  			myY = myY + (int)(Math.random() * 5) - 5;
  		}
  	}
- 		
+ 		/*
+ 		causes the bacteria to move away from food?
  		if(colX >= 200 && colY >= 200)
  		{
  			myX = myX + (int)(Math.random() * 5)+ 2;
@@ -111,7 +112,7 @@ float size = 10.0f;
  			myX = myX + (int)(Math.random() * 5)+ 2;
  			myY = myY + (int)(Math.random() * 5) - 2;
  		}
- 		
+ 		*/
  	}
  	public void show()
  	{
@@ -147,7 +148,7 @@ float size = 10.0f;
  		}
  		else if(get(myX,myY) == color(255,255,254))
  		{
- 			size = size + 0.3f;
+ 			size += 0.3f;
  			fill(0);
  			ellipse(a,b,5,5);
  			a = (int)(Math.random() * 400);
